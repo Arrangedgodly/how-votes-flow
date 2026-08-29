@@ -1,7 +1,7 @@
 # Ultron Supreme — State
 
 Product: Ranked-Choice Voting Simulator (one-page educational web app)
-Repository: /Users/arrangedgodly/Documents/Projects/ranked-choice (not a git repo)
+Repository: /Users/arrangedgodly/Documents/Projects/ranked-choice (git repo on `main`, created 2026-08-29)
 Coordinator: ultron-supreme
 Run started: 2026-08-28
 
@@ -49,4 +49,10 @@ Run started: 2026-08-28
 
 ## Next action
 
-**Final acceptance by user.** The Finishing phase is complete: closing critique clean (no material issues remaining, 3/3 refinements landed, score 35/40 flat — trend 35 → 35; one P3 cosmetic residual documented: dead `.line-clamp-2` utility scraped from docs prose, no action required), and the final document refresh has brought DESIGN.md / `.impeccable/design.json` level with the built world (persona no-clamp behavior, transfer pin gate, sharing surface incl. favicon provenance; raster scan 0/0; 167/167 tests + build green). The run halted at the quality ceiling — nothing remains but the user's acceptance.
+**Run complete.** 2026-08-29 — user accepted the delivered app ("this looks wonderful"). All ultron-supreme completion criteria met: every committed task validated, finishing phase complete (closing critique clean, 3/3 refinements landed), production log records the final acceptance state, deviations documented.
+
+## Deployment (post-run, user-requested 2026-08-29)
+
+- User authorized external publishing; route chosen by user: **Cloudflare Pages** (repo-connected) + custom domain **vote.graydonwasil.com**; repo name **how-votes-flow**.
+- Coordinator prep (local only): `.gitignore` extended (excludes `.impeccable/review/` + critique `*.png` build evidence), `.node-version` = 22, `package.json` name → `how-votes-flow` + `engines.node >=20.19`, README with deploy guide, tests 167/167 + build green re-verified, git initialized on `main`, single commit 55d4757 amended to the user's configured identity (Grady <arrangedgodly@gmail.com>).
+- Wizard-lane (handed to user, gh/wrangler not installed): create GitHub repo, push, connect CF Pages (build `npm run build` → `dist`), attach custom domain (DNS + cert automatic in same-account zone). Awaiting user's confirmed real-world outcome, then live verification.
