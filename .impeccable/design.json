@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-29T13:53:12.000Z",
+  "title": "Design System: How Votes Flow",
+  "extensions": {
+    "colorMeta": {
+      "ground-950": {
+        "role": "neutral",
+        "displayName": "Under-Stands Black",
+        "canonical": "#06080C",
+        "tonalRamp": [
+          "#06080C",
+          "#0B0E14",
+          "#12161F",
+          "#1A1F2B",
+          "#232A39",
+          "#303A4F",
+          "#47536D",
+          "#EEF2F8"
+        ]
+      },
+      "ground-900": {
+        "role": "neutral",
+        "displayName": "Arena Floor",
+        "canonical": "#0B0E14",
+        "tonalRamp": [
+          "#06080C",
+          "#0B0E14",
+          "#12161F",
+          "#1A1F2B",
+          "#232A39",
+          "#303A4F",
+          "#47536D",
+          "#EEF2F8"
+        ]
+      },
+      "ground-800": {
+        "role": "neutral",
+        "displayName": "Lane Bed",
+        "canonical": "#12161F",
+        "tonalRamp": [
+          "#06080C",
+          "#0B0E14",
+          "#12161F",
+          "#1A1F2B",
+          "#232A39",
+          "#303A4F",
+          "#47536D",
+          "#EEF2F8"
+        ]
+      },
+      "ground-700": {
+        "role": "neutral",
+        "displayName": "Raised Strip",
+        "canonical": "#1A1F2B",
+        "tonalRamp": [
+          "#06080C",
+          "#0B0E14",
+          "#12161F",
+          "#1A1F2B",
+          "#232A39",
+          "#303A4F",
+          "#47536D",
+          "#EEF2F8"
+        ]
+      },
+      "ground-600": {
+        "role": "neutral",
+        "displayName": "Press Bed",
+        "canonical": "#232A39",
+        "tonalRamp": [
+          "#06080C",
+          "#0B0E14",
+          "#12161F",
+          "#1A1F2B",
+          "#232A39",
+          "#303A4F",
+          "#47536D",
+          "#EEF2F8"
+        ]
+      },
+      "ground-500": {
+        "role": "neutral",
+        "displayName": "Rule Line",
+        "canonical": "#303A4F",
+        "tonalRamp": [
+          "#06080C",
+          "#0B0E14",
+          "#12161F",
+          "#1A1F2B",
+          "#232A39",
+          "#303A4F",
+          "#47536D",
+          "#EEF2F8"
+        ]
+      },
+      "ground-400": {
+        "role": "neutral",
+        "displayName": "Bright Line",
+        "canonical": "#47536D",
+        "tonalRamp": [
+          "#06080C",
+          "#0B0E14",
+          "#12161F",
+          "#1A1F2B",
+          "#232A39",
+          "#303A4F",
+          "#47536D",
+          "#EEF2F8"
+        ]
+      },
+      "ada": {
+        "role": "tertiary",
+        "displayName": "Ada Sky",
+        "canonical": "#8AD4F7",
+        "tonalRamp": [
+          "#5B8CA3",
+          "#71AECB",
+          "#8AD4F7",
+          "#A4DDF9",
+          "#BDE7FB",
+          "#D3EFFC",
+          "#E5F6FD",
+          "#F3FBFE"
+        ]
+      },
+      "eli": {
+        "role": "tertiary",
+        "displayName": "Eli Pitch Green",
+        "canonical": "#009E73",
+        "tonalRamp": [
+          "#00684C",
+          "#00825E",
+          "#009E73",
+          "#38B392",
+          "#70C9B1",
+          "#9EDACA",
+          "#C7EAE0",
+          "#E6F5F1"
+        ]
+      },
+      "nia": {
+        "role": "tertiary",
+        "displayName": "Nia Marquee Yellow",
+        "canonical": "#E8EC33",
+        "tonalRamp": [
+          "#999C22",
+          "#BEC22A",
+          "#E8EC33",
+          "#EDF060",
+          "#F2F48D",
+          "#F6F8B1",
+          "#FAFBD2",
+          "#FDFDEB"
+        ]
+      },
+      "theo": {
+        "role": "tertiary",
+        "displayName": "Theo Violet",
+        "canonical": "#C467AE",
+        "tonalRamp": [
+          "#814473",
+          "#A1548F",
+          "#C467AE",
+          "#D188C0",
+          "#DEAAD2",
+          "#E9C5E0",
+          "#F2DEED",
+          "#F9F0F7"
+        ]
+      },
+      "ink-bright": {
+        "role": "neutral",
+        "displayName": "Ink Bright",
+        "canonical": "#EEF2F8",
+        "tonalRamp": [
+          "#9DA0A4",
+          "#C3C6CB",
+          "#EEF2F8",
+          "#F2F5FA",
+          "#F5F8FB",
+          "#F9FAFC",
+          "#FBFCFD",
+          "#FDFEFE"
+        ]
+      },
+      "ink-body": {
+        "role": "neutral",
+        "displayName": "Ink Body",
+        "canonical": "#C7CEDC",
+        "tonalRamp": [
+          "#838891",
+          "#A3A9B4",
+          "#C7CEDC",
+          "#D3D9E4",
+          "#E0E4EB",
+          "#EAECF2",
+          "#F3F4F7",
+          "#F9FAFC"
+        ]
+      },
+      "ink-mute": {
+        "role": "neutral",
+        "displayName": "Ink Mute",
+        "canonical": "#96A0B4",
+        "tonalRamp": [
+          "#636A77",
+          "#7B8394",
+          "#96A0B4",
+          "#ADB5C5",
+          "#C4CAD5",
+          "#D7DBE3",
+          "#E8EAEF",
+          "#F5F6F8"
+        ]
+      },
+      "buzzer": {
+        "role": "primary",
+        "displayName": "Buzzer Amber",
+        "canonical": "#FF6A00",
+        "tonalRamp": [
+          "#A84600",
+          "#D15700",
+          "#FF6A00",
+          "#FF8B38",
+          "#FFAC70",
+          "#FFC69E",
+          "#FFDEC7",
+          "#FFF0E6"
+        ]
+      },
+      "strike": {
+        "role": "secondary",
+        "displayName": "Strike White",
+        "canonical": "#E9EDF5",
+        "tonalRamp": [
+          "#9A9CA2",
+          "#BFC2C9",
+          "#E9EDF5",
+          "#EEF1F7",
+          "#F3F5F9",
+          "#F7F8FB",
+          "#FAFBFD",
+          "#FDFDFE"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "led": {
+        "displayName": "LED Tally",
+        "purpose": "Every count, tally, sum, and beat label — Doto dot-matrix with tabular figures."
+      },
+      "display": {
+        "displayName": "Signage Display",
+        "purpose": "Headings, names, tags, chips — Barlow Condensed uppercase."
+      },
+      "body": {
+        "displayName": "Narration Body",
+        "purpose": "Ribbon narration and verdict standfirst — Barlow 14px, stepping to 15px at ≥640px; story, disclosures, and roster labels hold 14px; capped 75ch."
+      },
+      "label": {
+        "displayName": "Score-Bug Label",
+        "purpose": "The smallest marks — Barlow Condensed uppercase: verdict headline/side/disclosure labels and the majority-line caption at 11px (0.14em); the primary action runs the register large at 14px."
+      },
+      "scale": {
+        "displayName": "The Built Ramp",
+        "purpose": "Every size step the app renders — 11·12·13·14·15·16·18·24·30·48·60·72·96px — enumerated in DESIGN.md frontmatter typography.scale; per-step roles below.",
+        "steps": {
+          "micro": "11px — verdict headline/side/disclosure labels, majority-line caption (Condensed 600, 0.14em).",
+          "tag": "12px — chips, token-row tags, statuses, out-captions, section headings (Condensed 600); personas, captions, subtitle at phone width (Barlow 400); the playback beat chip (Doto 700).",
+          "name": "13px — lane full names (Condensed 500, 0.08em); glossary tooltip definitions at ≥640px (Barlow 400).",
+          "copy": "14px — narration base: ribbon and standfirst at phone width, story, disclosures, roster labels (Barlow 400); lane short tags and the primary action (Condensed 600); token counts, story tags, transfer pins (Doto 700).",
+          "copy-wide": "15px — the narration step at ≥640px: ribbon text and verdict standfirst (Barlow 400).",
+          "count": "16px — the majority line's threshold numeral (Doto 700); the roster steppers' glyphs (Condensed 700).",
+          "chip": "18px — the ribbon's round chip, weight inputs, 100-sum readout (Doto 700); verdict-side names (Condensed 600, 0.04em).",
+          "marquee": "24px — the h1 page name at phone width (Doto 900).",
+          "marquee-wide": "30px — the h1 page name at ≥640px (Doto 900).",
+          "verdict": "48px — the verdict card's counts at phone width (Doto 900).",
+          "tally": "60px — lane tallies at phone width and verdict counts at ≥640px (Doto 900).",
+          "tally-wide": "72px — lane tallies at ≥640px (Doto 900).",
+          "tally-max": "96px — lane tallies at ≥1024px (Doto 900)."
+        }
+      }
+    },
+    "shadows": [
+      {
+        "name": "strike-bar",
+        "value": "0 2px 8px rgba(0,0,0,0.55)",
+        "purpose": "The strike’s drop — the diagonal that kills an eliminated lane physically floats over the floor."
+      },
+      {
+        "name": "tooltip-float",
+        "value": "0 10px 28px rgba(0,0,0,0.5)",
+        "purpose": "The glossary tooltip’s floating definition panel (Term) — the one element that hovers above the floor."
+      },
+      {
+        "name": "lane-rule-inset",
+        "value": "inset 0 1px 0 color-mix(in oklab, currentColor 14%, transparent)",
+        "purpose": "The lit top edge of a lane rail (with a 1px 62% currentColor top border)."
+      },
+      {
+        "name": "strip-inset",
+        "value": "inset 0 1px 0 color-mix(in oklab, #EEF2F8 6%, transparent)",
+        "purpose": "The raised strip’s top light on ribbon and chip beds."
+      }
+    ],
+    "motion": [
+      {
+        "name": "strike-in",
+        "value": "420ms cubic-bezier(0.22, 0.9, 0.32, 1) 1 both",
+        "purpose": "The strike cuts once — a clip-path wipe across the lane."
+      },
+      {
+        "name": "lane-dim",
+        "value": "filter 360ms ease-out",
+        "purpose": "Lights-out dimming riding with the strike."
+      },
+      {
+        "name": "buzzer",
+        "value": "950ms ease-out 1 both",
+        "purpose": "One amber pulse on the winning tally at the declaration beat."
+      },
+      {
+        "name": "stream-in",
+        "value": "240ms ease-out 1 both",
+        "purpose": "Transfer streams arriving over the floor."
+      },
+      {
+        "name": "reduced-motion-backstop",
+        "value": "animation-duration: 0.01ms !important; transition-duration: 0.01ms !important",
+        "purpose": "Two nets zero everything: prefers-reduced-motion and [data-motion=reduced] (OS query AND manual toggle)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (TIP OFF)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action; disabled sinks to the press bed instead of vanishing.",
+      "html": "<button class=\"ds-btn-primary\">Tip off</button>",
+      "css": ".ds-btn-primary { background: #EEF2F8; color: #06080C; border: none; border-radius: 0; padding: 8px 20px; font-family: \"Barlow Condensed\", system-ui, sans-serif; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; transition: transform 150ms ease-out, background-color 150ms ease-out; } .ds-btn-primary:hover { transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #EEF2F8; outline-offset: 2px; } .ds-btn-primary:disabled { background: #232A39; color: #96A0B4; transform: none; pointer-events: none; }"
+    },
+    {
+      "name": "Chip (preset / playback)",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Toggle chip: pressed state is the press bed + bright ink; aria-pressed carries state.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">The Spoiler</button>",
+      "css": ".ds-chip { background: #1A1F2B; color: #C7CEDC; border: 1px solid #303A4F; border-radius: 9999px; padding: 6px 12px; font-family: \"Barlow Condensed\", system-ui, sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; transition: color 150ms, border-color 150ms; cursor: pointer; } .ds-chip:hover { border-color: #47536D; color: #EEF2F8; } .ds-chip[aria-pressed=\"true\"] { background: #232A39; color: #EEF2F8; border-color: #EEF2F8; } .ds-chip:focus-visible { outline: 2px solid #EEF2F8; outline-offset: 2px; }"
+    },
+    {
+      "name": "Weight Stepper + LED Input",
+      "kind": "input",
+      "refersTo": "input-weight",
+      "description": "The lineup editor weight control: square stepper, LED register value, sunken-when-disabled.",
+      "html": "<span class=\"ds-weight\"><button class=\"ds-step\" aria-label=\"Return one vote\">−</button><input class=\"ds-weight-input\" aria-label=\"Votes\" value=\"38\" /><button class=\"ds-step\" aria-label=\"Place one vote\">+</button></span>",
+      "css": ".ds-weight { display: inline-flex; align-items: center; gap: 4px; } .ds-step { width: 2rem; height: 2rem; background: #1A1F2B; color: #C7CEDC; border: 1px solid #303A4F; border-radius: 0; font-family: \"Barlow Condensed\", system-ui, sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; transition: color 150ms, border-color 150ms; } .ds-step:hover:not(:disabled) { border-color: #47536D; color: #EEF2F8; } .ds-step:disabled { background: #12161F; color: #96A0B4; cursor: not-allowed; } .ds-step:focus-visible { outline: 2px solid #EEF2F8; outline-offset: 2px; } .ds-weight-input { width: 3.5rem; background: #12161F; color: #EEF2F8; border: 1px solid #303A4F; border-radius: 0; padding: 4px; text-align: center; font-family: \"Doto Variable\", system-ui, sans-serif; font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; } .ds-weight-input:focus-visible { outline: 2px solid #EEF2F8; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ribbon Strip",
+      "kind": "custom",
+      "refersTo": "panel-board",
+      "description": "The board’s caption strip and only live region: LED round chip + narration, 75ch.",
+      "html": "<div class=\"ds-ribbon\"><p class=\"ds-ribbon-chip\" aria-hidden=\"true\">R2</p><p class=\"ds-ribbon-text\" role=\"status\" aria-live=\"polite\">Round 2 — Theo is eliminated; 18 ballots move.</p></div>",
+      "css": ".ds-ribbon { display: flex; align-items: center; gap: 12px; background: #1A1F2B; border-top: 1px solid #303A4F; border-bottom: 1px solid #303A4F; box-shadow: inset 0 1px 0 color-mix(in oklab, #EEF2F8 6%, transparent); padding: 10px 12px; } .ds-ribbon-chip { flex-shrink: 0; font-family: \"Doto Variable\", system-ui, sans-serif; font-weight: 700; font-size: 18px; color: #EEF2F8; font-variant-numeric: tabular-nums; margin: 0; } .ds-ribbon-text { min-width: 0; flex: 1; max-width: 75ch; font-family: \"Barlow\", system-ui, sans-serif; font-size: 14px; line-height: 1.4; color: #C7CEDC; margin: 0; } @media (min-width: 640px) { .ds-ribbon-text { font-size: 15px; } }"
+    },
+    {
+      "name": "Score Lane",
+      "kind": "custom",
+      "refersTo": "panel-board",
+      "description": "The signature lane: ink rail, cast-ink tag, huge LED tally with bloom, gauge with the amber majority line; the persona stays lit and unclamped — it wraps in full (three lines at phone width, two at ≥1024px), never an ellipsis.",
+      "html": "<div class=\"ds-lane\" style=\"color:#8AD4F7\"><p class=\"ds-lane-tag\">ADA</p><p class=\"ds-lane-tally\">38</p><div class=\"ds-lane-gauge\"><span class=\"ds-lane-fill\" style=\"height:38%\"></span><span class=\"ds-lane-line\" style=\"bottom:51%\"></span></div><p class=\"ds-lane-persona\">The methodical veteran: prepared for every question, flustered by none.</p></div>",
+      "css": ".ds-lane { border-top: 1px solid color-mix(in oklab, currentColor 62%, transparent); box-shadow: inset 0 1px 0 color-mix(in oklab, currentColor 14%, transparent); padding-top: 6px; } .ds-lane-tag { font-family: \"Barlow Condensed\", system-ui, sans-serif; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; margin: 0; color: currentColor; } .ds-lane-tally { font-family: \"Doto Variable\", system-ui, sans-serif; font-weight: 900; font-size: 60px; line-height: 1; color: #EEF2F8; text-shadow: 0 0 0.55em color-mix(in oklab, currentColor 42%, transparent); font-variant-numeric: tabular-nums; margin: 10px 0 0; } .ds-lane-gauge { position: relative; height: 56px; border-bottom: 1px solid #303A4F; } .ds-lane-fill { position: absolute; left: 4px; right: 4px; bottom: 0; background: currentColor; } .ds-lane-line { position: absolute; left: -10px; right: -10px; height: 3px; background: #FF6A00; } .ds-lane-persona { min-height: 2.6em; margin: 8px 0 0; padding: 0 4px; font-family: \"Barlow\", system-ui, sans-serif; font-size: 12px; line-height: 1.375; color: #96A0B4; }"
+    },
+    {
+      "name": "Transfer Stream + Pinned Count",
+      "kind": "custom",
+      "refersTo": "transfer-pin",
+      "description": "The signature transfer: a dashed arc in the receiving team's ink carrying five-chunk sprites; the pinned +N states its number only — it renders with the first landed chunk, never a \"+0\", parking beside the tally it ticks up. Aria-hidden decoration; the ribbon narrates the identical numbers.",
+      "html": "<div class=\"ds-stream\" style=\"color:#E8EC33\"><svg class=\"ds-stream-arc\" viewBox=\"0 0 240 96\" aria-hidden=\"true\"><path d=\"M 12 16 Q 120 -16 228 68\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-opacity=\"0.45\" stroke-dasharray=\"1 7\" stroke-linecap=\"round\"/></svg><span class=\"ds-stream-chunk\"><i></i><i></i><i></i><i></i><i></i></span><span class=\"ds-stream-pin\">+5</span></div>",
+      "css": ".ds-stream { position: relative; height: 96px; } .ds-stream-arc { position: absolute; inset: 0; width: 100%; height: 100%; } .ds-stream-chunk { position: absolute; left: 106px; top: 34px; display: inline-flex; gap: 2px; } .ds-stream-chunk i { width: 6px; height: 6px; border-radius: 3px; border: 1px solid color-mix(in oklab, currentColor 55%, transparent); background: color-mix(in oklab, currentColor 18%, transparent); } .ds-stream-pin { position: absolute; left: 228px; top: 68px; transform: translate(-50%, -50%); background: #1A1F2B; border-top: 1px solid #303A4F; border-bottom: 1px solid #303A4F; box-shadow: inset 0 1px 0 color-mix(in oklab, #EEF2F8 6%, transparent); padding: 2px 6px; font-family: \"Doto Variable\", system-ui, sans-serif; font-weight: 700; font-size: 14px; line-height: 1; color: currentColor; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Token Chip Row",
+      "kind": "custom",
+      "refersTo": "panel-board",
+      "description": "Courtside ballots: physical tokens in chunks of five, tinted by the ink of the lane they count for.",
+      "html": "<div class=\"ds-token-row\" style=\"color:#E8EC33\"><span class=\"ds-token-label\">NIA</span><span class=\"ds-token-count\">30</span><span class=\"ds-tokens\"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>",
+      "css": ".ds-token-row { display: flex; align-items: center; gap: 10px; } .ds-token-label { width: 120px; flex-shrink: 0; font-family: \"Barlow Condensed\", system-ui, sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: currentColor; } .ds-token-count { width: 24px; text-align: center; font-family: \"Doto Variable\", system-ui, sans-serif; font-weight: 700; font-size: 14px; color: #EEF2F8; font-variant-numeric: tabular-nums; } .ds-tokens { display: inline-flex; gap: 3px; } .ds-tokens i { width: 10px; height: 10px; border-radius: 3px; border: 1px solid color-mix(in oklab, currentColor 55%, transparent); background: color-mix(in oklab, currentColor 18%, transparent); box-shadow: inset 0 1px 0 color-mix(in oklab, currentColor 32%, transparent); }"
+    },
+    {
+      "name": "Verdict Disclosure Panel",
+      "kind": "card",
+      "refersTo": "panel-disclosure",
+      "description": "Only the disclosures that fired: bordered floor panel, score-bug label, 75ch body.",
+      "html": "<div class=\"ds-disclosure\"><p class=\"ds-disclosure-label\">TIE-BREAK</p><p class=\"ds-disclosure-body\">Real elections often settle ties by lot — a coin flip or a name drawn at random.</p></div>",
+      "css": ".ds-disclosure { background: #0B0E14; border: 1px solid #303A4F; border-radius: 0; padding: 10px 12px; } .ds-disclosure-label { font-family: \"Barlow Condensed\", system-ui, sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: #96A0B4; margin: 0; } .ds-disclosure-body { margin: 6px 0 0; max-width: 75ch; font-family: \"Barlow\", system-ui, sans-serif; font-size: 14px; line-height: 1.4; color: #C7CEDC; }"
+    },
+    {
+      "name": "The Strike",
+      "kind": "custom",
+      "description": "The one bold diagonal that kills an eliminated lane; one of only two objects allowed to drop a shadow over the floor.",
+      "html": "<div class=\"ds-strike\"><i></i></div>",
+      "css": ".ds-strike { position: relative; overflow: hidden; height: 120px; background: #0B0E14; } .ds-strike i { position: absolute; left: 50%; top: 50%; width: 210%; height: 8px; transform: translate(-50%, -50%) rotate(61deg); background: #E9EDF5; box-shadow: 0 2px 8px rgba(0,0,0,0.55); }"
+    },
+    {
+      "name": "Glossary Tooltip (Term)",
+      "kind": "custom",
+      "refersTo": "panel-disclosure",
+      "description": "A jargon term in running copy: dotted-underline button, plain-language definition in a floating panel anchored above it.",
+      "html": "<span class=\"ds-term\"><button class=\"ds-term-btn\" aria-expanded=\"true\">majority</button><span class=\"ds-term-panel\" role=\"tooltip\">More than half of the ballots still counting.</span></span>",
+      "css": ".ds-term { position: relative; display: inline-block; } .ds-term-btn { border: none; border-bottom: 1px dotted currentColor; background: transparent; color: inherit; font: inherit; padding: 0; cursor: help; } .ds-term-btn:focus-visible { outline: 2px solid #EEF2F8; outline-offset: 2px; } .ds-term-panel { position: absolute; bottom: 100%; left: 0; margin-bottom: 8px; display: block; width: min(44ch, 20rem); border: 1px solid #303A4F; background: #12161F; padding: 10px 12px; font-family: \"Barlow\", system-ui, sans-serif; font-size: 12px; line-height: 1.6; text-align: left; color: #C7CEDC; box-shadow: 0 10px 28px rgba(0,0,0,0.5); } @media (min-width: 640px) { .ds-term-panel { font-size: 13px; } }"
+    },
+    {
+      "name": "Favicon — the Four-Ink Quad",
+      "kind": "custom",
+      "description": "The board's poster at share scale: an authored in-world SVG (hand-drawn for this world; no raster asset ships) — the four cast inks in lane order as a 2×2 quad of square cells on ground-950, 1px gutters, no amber. Served at /favicon.svg; the meta description, og:title/og:description/og:type card, and theme-color (ground-950) dress the same world. (Snippet scaled up for inspection; the asset is native 16×16.)",
+      "html": "<svg class=\"ds-favicon\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" role=\"img\" aria-label=\"How Votes Flow\"><rect width=\"16\" height=\"16\" fill=\"#06080C\"/><rect x=\"1\" y=\"1\" width=\"6\" height=\"6\" fill=\"#8AD4F7\"/><rect x=\"9\" y=\"1\" width=\"6\" height=\"6\" fill=\"#009E73\"/><rect x=\"1\" y=\"9\" width=\"6\" height=\"6\" fill=\"#E8EC33\"/><rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" fill=\"#C467AE\"/></svg>",
+      "css": ".ds-favicon { display: block; width: 64px; height: 64px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Arena Board",
+    "overview": "The election is a live game on one board. A near-black arena ground carries four team lanes with huge lamp-lit tallies, a physical majority line drawn at 51, a ribbon caption strip that narrates every change, and the 100 ballots massed courtside as physical tokens. There is no explainer chrome, no Sankey diagram, no setup wizard: the board is edited by hand (one board, two grips), the count is performed on it, and the strike — one bold diagonal — kills an eliminated lane. Every number on the page is a scoreboard digit; every sentence the board speaks runs through the ribbon.\n\nThe system is dark because the subject is a scoreboard at night, not because dark mode was chosen by category. Every surface is a step of a single cool near-black ramp (ground 950 → 400); text inks are tinted from the ground hue and never gray. The four candidate inks are Okabe-Ito-derived and pairwise distinct under deuteranopia and protanopia; a candidate is the same ink everywhere. Buzzer amber is a reserved channel: the majority line, the buzzer mark, and exactly two elements on a changed verdict.",
+    "keyCharacteristics": [
+      "One near-black ground ramp; no surface outside it; text tinted from its hue",
+      "One ink per candidate, colorblind-safe, everywhere that candidate appears",
+      "LED dot-matrix numerals (Doto) for every count; signage grotesque (Barlow / Barlow Condensed) for every word",
+      "Buzzer amber reserved for threshold moments; ink everywhere else",
+      "The ribbon narrates; the strike decides; the tokens mass in chunks of five"
+    ],
+    "rules": [
+      {
+        "name": "The Buzzer Reservation Rule",
+        "body": "Amber appears only where a threshold is crossed: the majority line, the buzzer mark, and the changed verdict’s two marks. If amber shows up anywhere else, the reveal is broken.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Ink Per Candidate Rule",
+        "body": "Each candidate has exactly one ink keyed to their id, used in every surface they touch. Never recolor a candidate by state, mood, or chart position.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never Gray Rule",
+        "body": "Text inks are tinted from the ground hue, never neutral gray; disabled means sunken onto a deeper bed, not faded toward gray.",
+        "section": "colors"
+      },
+      {
+        "name": "The Smallest Poster Rule",
+        "body": "The board's poster at share scale is the favicon — an authored in-world SVG (hand-drawn for this world; no raster asset ships anywhere): the four cast inks in lane order as a 2×2 quad of square 6px cells on ground-950, 1px gutters, no amber — the reservation holds even off the page. The link card (meta description, og:title, og:description, og:type website) and the browser chrome (theme-color = ground-950) dress from the same tokens.",
+        "section": "colors"
+      },
+      {
+        "name": "The Numbers Are LED Rule",
+        "body": "Every count, tally, sum, and beat label renders in the Doto register with tabular figures; prose never shows a bare number where a tally can carry it.",
+        "section": "typography"
+      },
+      {
+        "name": "The 75ch Ribbon Rule",
+        "body": "Narration and disclosure copy cap at 75ch; captions at 38ch. A score bug states, it does not paragraph.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Floor Rule",
+        "body": "Floor panels cast no shadows; a surface’s height is its ground step. Only objects that physically float above the floor drop one: the strike and the glossary tooltip. If a card needs a shadow to separate, its ground step is wrong.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Court Rule",
+        "body": "Structure is square; only finger-scale controls may round (tokens 3px, chips pill). A rounded panel is from another world.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do render every count in the Doto LED register with tabular figures.",
+      "Do set a candidate’s color only through their cast ink, by id, in every surface.",
+      "Do mirror every board state change in the ribbon text — one announcer, one announcement per change.",
+      "Do keep amber for thresholds only; spend it on at most two elements at the verdict.",
+      "Do chunk vote tokens in groups of five; each mass states its own number.",
+      "Do let the persona read in full at every lane width — it wraps (three lines at phone width, two at ≥1024px) and is never clamped.",
+      "Do theme the browser’s own surfaces: ink-bright selection and caret, the 2px offset focus ring, dark color-scheme, theme-color on ground-950, and the four-ink favicon at share scale.",
+      "Do honor reduced motion two ways: the OS query and the in-app toggle both zero every animation and transition app-wide."
+    ],
+    "donts": [
+      "Don’t introduce a neutral gray, a shadowed panel, or a rounded card — depth is a ground step, corners are square.",
+      "Don’t brighten a struck lane; the dim IS the meaning (“out”), with the caption and persona carrying the legible channel.",
+      "Don’t add a second live region, a kicker/eyebrow label, gradient text, or glyph icons.",
+      "Don’t let the 100-sum drift: the editor conserved electorate (placed + pool = 100) is visual law — show the sum, gate the primary on it.",
+      "Don’t load a fourth type family or pull fonts from a CDN; the three registers are self-hosted."
+    ]
+  }
+}

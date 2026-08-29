@@ -1,0 +1,65 @@
+# Closing Critique Snapshot — How Votes Flow (src/App.tsx)
+
+Date: 2026-08-28 · Phase: finishing (ultron-impeccable auto mode, closing critique) · Target slug: `src-app-tsx`
+
+⚠️ DEGRADED: single-context (no sub-agent/Task tool exposed in this session; assessments A and B run as two rigorously separated in-thread passes, disclosed — pass A completed and frozen before any detector output entered the synthesis context)
+
+## Report header provenance
+
+Method: degraded dual-pass (A: in-thread design review — source reads of the three refinement surfaces + visual/DOM inspection of the served dist at 390×844 and 1280×800, closed and frozen before detector output; B: in-thread detector + technical regression sweep — impeccable detect CLI, npm test, npm run build, dist grep audits, mtime scope sweep). Opening snapshot: `.impeccable/critique/2026-08-28/findings.md` (35/40). Evidence this run: `.impeccable/critique/2026-08-28/A-close-*.png` (5 fresh captures).
+
+## Verdict
+
+**No material issues remaining.** All three refinements landed as intended; the opening run's findings are gone; the regression sweep is clean. One new finding, P3 cosmetic (dead CSS utility, no user impact). The run halts at the quality ceiling.
+
+## Per-refinement landing (independently re-verified this run)
+
+1. **#1 `$impeccable polish` — LANDED (both sub-items)**
+   - *Persona clamp (opening P2)*: GONE. Re-measured this run at 390×844: all four lanes `clamp: none`, `overflow: visible`, `scrollHeight = clientHeight` (50/50, 3 lines each), full persona text present in the DOM; 2×2 grid intact (row tops 94/372, column lefts 25/201); tally still 60px (hierarchy preserved); `scrollWidth` exactly 390 in setup, mid-transfer, and playback states. Desktop 1280: 2 lines unclamped, 4-across, tally 96px. Source: `ScoreLane.tsx:180-186` — clamp removed, rationale comment in place ("Never clamped… phone parity means the board's only character copy reads in full").
+   - *"+0" pin (opening P3)*: GONE. `TransferLayer.tsx:222-224` gates the badge on `count > 0`. Probe at the opening critique's own repro window (`?pin=transfer&round=1&at=300`): transfer layer + arcs mounted, **zero** badges rendered; at `at=900` the pin reads "+5" beside the ticking tally. Vision-confirmed in captures.
+2. **#2 `$impeccable harden` — LANDED.** `index.html` head: 151-char plain-language meta description, `theme-color #06080C` (verbatim `ground-950` token from `arena.ts`), og:title/og:description/og:type, SVG icon link. `/favicon.svg` serves 200 `image/svg+xml`; its four fills match the cast inks verbatim (`#8AD4F7`, `#009E73`, `#E8EC33`, `#C467AE`) on `#06080C`, square corners, **zero buzzer amber**. DIRECTION CONTRACT with seed 71356508 intact in source and in the built `dist/index.html` (first non-whitespace child of `<body>`).
+3. **#3 `$impeccable document` — LANDED.** DESIGN.md frontmatter `typography.scale` enumerates all 13 steps (11·12·13·14·15·16·18·24·30·48·60·72·96px) with role keys; `.impeccable/design.json` `extensions.typographyMeta.scale.steps` carries per-step role sentences with corrected role purposes. Detector file-scan this run (`index.html src/components src/playback src/copy`): **0 findings, exit 0** — the opening 4 advisories cleared. Enforcement proven genuine, not a parse failure: a throwaway `text-[17px]` probe in `src/components/` still flags with exit 2 (probe deleted after extraction).
+
+## Regression sweep (new-issue check)
+
+- **World grammar intact.** Buzzer reservation held: DOM amber census at desktop setup and mobile playback — majority-line segments (3px), "51" numerals, "majority line" captions only; zero amber elsewhere; favicon carries no amber. One ink per candidate unchanged (vision-confirmed on all captures).
+- **Keyboard journey unaffected.** 14 tab stops walked (skip link → Tip off → playback controls → preset chips → steppers → weight input → rank selects → Remove) — every control focusable with a solid 2px outline; Enter on Tip Off starts playback and the ribbon narrates "Round 1 — first choices only: Ada 38, Nia 30, Theo 18, Eli 1".
+- **Tests/build green.** `npm test` 167/167 (11 files); `npm run build` exit 0 — CSS 34.81 kB/11.18 gzip, JS 245.09 kB/77.10 gzip (matches the refinement-verified figures).
+- **No new clipping/overflow.** `scrollWidth` exactly 390 in every probed mobile state; 0 console errors; no overlap in captures; the documented ramp steps (15px/13px) compile as before.
+- **Scope discipline.** mtime sweep vs the opening critique: only `ScoreLane.tsx`, `TransferLayer.tsx`, `index.html`, `public/favicon.svg`, `DESIGN.md` changed (plus docs/.impeccable/dist bookkeeping) — exactly the declared refinement surfaces, no stray edits.
+
+## New findings
+
+1. **[P3, cosmetic, known genus] Dead `.line-clamp-2` rule (~86 bytes) in the built CSS.** Tailwind v4's automatic content scan picks the literal class name out of the docs prose that records the removed clamp (`docs/ultron/refinement.md`, this snapshot directory's `findings.md`). Zero source usage (`grep` clean), no element carries the class (computed `line-clamp: none` on all lanes this run), no rendering or size impact beyond ~30 gz bytes. Same genus as the `.text-[17px]` residue the #3 verifier recorded — which this run's rebuild no longer emits. Fix if ever desired: a Tailwind `@source not` exclusion for `.impeccable/`/`docs/`, or rewording the prose. Not material.
+
+## Design Health Score (closing)
+
+| # | Heuristic | Score | Key Issue |
+|---|-----------|-------|-----------|
+| 1 | Visibility of System Status | 4 | Pin suppressed until first landing — motion now always states its number |
+| 2 | Match System / Real World | 4 | Unchanged; meta description extends the plain-language voice off-app |
+| 3 | User Control and Freedom | 3 | No back-step to a previous round (scope choice, recorded) |
+| 4 | Consistency and Standards | 4 | Phone parity now genuine — the cast renders identically at every width |
+| 5 | Error Prevention | 4 | Unchanged |
+| 6 | Recognition Rather Than Recall | 3 | Mid-playback editor recall burden (unchanged) |
+| 7 | Flexibility and Efficiency | 3 | Keyboard accelerators out of v1 scope (recorded, not recommended) |
+| 8 | Aesthetic and Minimalist Design | 4 | Unchanged; taller mobile personas cost nothing in discipline |
+| 9 | Error Recovery | 3 | Thin error surface — prevention-first world (unchanged) |
+| 10 | Help and Documentation | 3 | One page, contextual tooltips only (unchanged) |
+| **Total** | | **35/40** | **Good — top of band, material queue empty** |
+
+No heuristics scored n/a. Cognitive load: 0 hard failures (unchanged).
+
+The total is flat vs the opening 35/40 by honest accounting: the three refinements cleared blemishes the opening run had already priced into 4-scored heuristics (the +0 under H1, the clipping under H4/H8) or which sit outside the ten in-app heuristics (sharing metadata, design-system records). No heuristic regressed; the remaining deductions are documented scope choices, not defects. **Trend: 35 → 35 (out of 40) with the P2/P3 backlog discharged.**
+
+## Disposition
+
+The quality ceiling for this scope is reached: no P0/P1/P2 remain, and the only new item is a P3 cosmetic build note. Next: final document refresh (the built reality changed in #1/#2 — persona rendering and the sharing surface are new built facts DESIGN.md/design.json should reflect), then phase complete.
+
+## Orchestration record (appended for this dated snapshot)
+
+- Assessed by: closing-critique orchestrator subagent (ultron-impeccable auto mode, ultron-supreme run).
+- Isolation method: ⚠️ degraded — no sub-agent tool exposed; two sequential in-thread passes (A closed and frozen before B began; A's notes recorded above before the detector CLI ran).
+- Evidence: `A-close-{mobile-setup,mobile-transfer-early,mobile-transfer-mid,mobile-verdict,desktop-setup,desktop-keyboard-after-tipoff}.png` (6 fresh captures at 390×844 / 1280×800).
+- Tests at critique time: 167/167 pass; build exit 0 (CSS 34.81 kB/11.18 gzip, JS 245.09 kB/77.10 gzip).
+- Local server: `vite preview` on :4192 started for captures, stopped before reporting. Scratch scripts deleted after evidence extraction (PNGs kept).

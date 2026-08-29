@@ -1,0 +1,220 @@
+{
+  "title": "Choose the visual world — How Votes Flow",
+  "question": "The roll assigned The Arena Board. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Arena Board",
+      "kicker": "THE ROLL",
+      "lineage": "stadium scoreboards and broadcast score bugs",
+      "thesis": "The election as a live game: four teams, three periods, first lane to 51 wins — and you watch the points change hands.",
+      "palette": [
+        "#0f1216",
+        "#f5b700",
+        "#58a6ff",
+        "#f2884b",
+        "#56c39a",
+        "#e0526d"
+      ],
+      "materials": [
+        "LED tally numerals",
+        "ribbon caption board",
+        "court-floor lanes",
+        "team pennant chips"
+      ],
+      "viewport": "Four huge score lanes over a buzzer line at 51, the 100 tokens massed courtside below; one button tips off Round 1.",
+      "risk": "A sports frame can read as trivializing in sober civic contexts; it must stay warm playground-tournament, not bloodsport.",
+      "raised": [
+        {
+          "from": "challenger-hypercard",
+          "raise": "One board, two grips — editing the lineup happens on the same arena board you watch, never a separate setup screen."
+        },
+        {
+          "from": "challenger-streetwear",
+          "raise": "The strike — an eliminated team is killed by one bold diagonal stripe that reads at any size, on any screen."
+        },
+        {
+          "from": "challenger-tensegrity",
+          "raise": "Leader-line counts — every transfer stream states its own number, pinned where it happens, so no motion goes unlabeled."
+        }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Election Night",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "TV election-night studio boards and race-call graphics",
+      "thesis": "The count as election-night coverage: races tightening on a dark studio wall, calls checked, the night wearing on.",
+      "palette": [
+        "#0b1d33",
+        "#ffb81c",
+        "#6fc2ff",
+        "#ff9d66",
+        "#7ad3a8",
+        "#f2f6fa"
+      ],
+      "materials": [
+        "studio glass panels",
+        "call-check marks",
+        "lower-third straps",
+        "ticking percentile bars"
+      ],
+      "viewport": "A dark studio wall of four race panels with call slots and a 51% bar; tokens wait as a paper-stack column by the desk.",
+      "risk": "The direction most runs in this category would land on — familiar and effective, least distinctive."
+    },
+    {
+      "id": "challenger-seven-segment",
+      "verdict": "competitive",
+      "label": "Seven-Segment Totem",
+      "lineage": "alarm clocks, gas-price totems, microwave panels",
+      "thesis": "Every count as an eight-cell LED mask: digits die and ignite, nothing ever slides.",
+      "palette": [
+        "#101014",
+        "#ff3b30",
+        "#ffb300",
+        "#3ad07a"
+      ],
+      "materials": [
+        "lit LED segments",
+        "ghost cells",
+        "matte totem housing"
+      ],
+      "viewport": "A tower of four giant segment readouts with ghost cells behind, transfers as digits flickering upward.",
+      "case": "Fuses cleanly: tallies become segment masks and eliminations become digits dying; it counts sharply but cannot carry the flow-and-cheer narrative.",
+      "risk": "Reads as a clock, not a contest, when the ghost cells do all the talking.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock.webp"
+    },
+    {
+      "id": "challenger-transit",
+      "verdict": "competitive",
+      "label": "The Midnight Interchange",
+      "lineage": "enamel transit diagrams, four colored lines",
+      "thesis": "Every ballot a journey: your vote rides a colored line and re-routes at the interchange when its line is suspended.",
+      "palette": [
+        "#101b3c",
+        "#e63946",
+        "#4c9aff",
+        "#ffb703",
+        "#2a9d8f"
+      ],
+      "materials": [
+        "enamel panel gloss",
+        "porcelain station ticks",
+        "45°-disciplined route inks"
+      ],
+      "viewport": "Four route lines crossing at one interchange, ballots as tokens riding lines that get suspended one by one.",
+      "case": "Fuses startlingly well: vote transfer IS a re-route at an interchange, and four colorblind-safe line inks are built in; loses on live totals and threshold drama, which maps do not natively show.",
+      "risk": "Implies a geography the election doesn't have; totals live in a legend instead of the world.",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram.webp"
+    },
+    {
+      "id": "challenger-wpa",
+      "verdict": "competitive",
+      "label": "The Civic Poster",
+      "lineage": "WPA national-park posters, public-education heritage",
+      "thesis": "Each round as a silkscreen poster plane: one imperative in blocky caps, four flat inks, the count printed in sunlight.",
+      "palette": [
+        "#f4ead8",
+        "#1d6a72",
+        "#c8761f",
+        "#7a8c4a",
+        "#a63a2b"
+      ],
+      "materials": [
+        "flat silkscreen inks",
+        "stacked poster planes",
+        "caption-bar block caps"
+      ],
+      "viewport": "A stacked-plane scene with a caption bar — ROUND 2: MAYA IS OUT — and the tallies printed into the sky.",
+      "case": "Fuses warmly: WPA is literally civic-education poster lineage and the caption bar is a perfect round-narrator; loses because static planes fight a live-updating counter.",
+      "risk": "Charm without liveness — a poster celebrates a result, it doesn't count one.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-wpa-park-poster-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/posters-covers-sleeves-wpa-park-poster.webp"
+    },
+    {
+      "id": "challenger-hypercard",
+      "verdict": "declined",
+      "label": "The Card Stack",
+      "lineage": "HyperCard shoebox stacks",
+      "palette": [
+        "#f5f5f0",
+        "#1a1a1a"
+      ],
+      "materials": [
+        "one-bit stipple",
+        "hand-painted buttons"
+      ],
+      "case": "Fuses poorly: one-bit monochrome strains the four-color candidate coding a party-neutral cast needs; nostalgia narrows the audience.",
+      "kept": "Browse and author as one object — editing in place.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox-hero.webp"
+    },
+    {
+      "id": "challenger-streetwear",
+      "verdict": "declined",
+      "label": "Stockroom Quotes",
+      "lineage": "industrial streetwear, hazard stripes, zip-tie tags",
+      "palette": [
+        "#f5f4ef",
+        "#141414",
+        "#ff5c00"
+      ],
+      "materials": [
+        "hazard diagonals",
+        "zip-tie tags",
+        "stenciled label plates"
+      ],
+      "case": "Fuses poorly: stockroom cool isn't civic warmth, and quoted labels don't carry counting.",
+      "kept": "One unambiguous strike device for eliminated states.",
+      "hero": "https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-industrial-quote-grammar-hero.webp"
+    },
+    {
+      "id": "challenger-tensegrity",
+      "verdict": "declined",
+      "label": "The Tension Column",
+      "lineage": "tensegrity sculpture, carbon rods and red cord",
+      "palette": [
+        "#e8e6e1",
+        "#26282b",
+        "#d0342c"
+      ],
+      "materials": [
+        "carbon rods",
+        "tension cord",
+        "leader-line annotations"
+      ],
+      "case": "Fuses poorly: abstract physics adds a translation layer between the visitor and a civic process.",
+      "kept": "Leader-line annotations pinned to every node.",
+      "hero": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-tensegrity-breathing-column-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What this category ships, executed impeccably.",
+    "palette": [
+      "#ffffff",
+      "#111827",
+      "#2563eb"
+    ],
+    "materials": [
+      "clean grid",
+      "editorial serif",
+      "results sankey"
+    ],
+    "viewport": "An explainer headline over an editable ballot card and a results sankey.",
+    "risk": "Indistinguishable from every other voting explainer by design."
+  },
+  "steer": true
+}

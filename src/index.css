@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+/*
+  ARENA BOARD — the world as tokens (T4)
+  Stadium-scoreboard world: a near-black arena ground, four colorblind-safe
+  team inks (one per cast id), LED dot-matrix tally numerals, a ribbon caption
+  strip, court-lane rails, and a buzzer amber reserved for threshold moments.
+
+  Raw color values are mirrored in src/theme/arena.ts and enforced equal by
+  src/theme/arena.test.ts — edit both or neither. The CVD/contrast gates that
+  validated this palette are enforced in the same test file at every `npm test`.
+
+  Fonts are self-hosted via @fontsource (imports in src/main.tsx; no CDN at
+  runtime): Doto for LED tallies, Barlow Condensed for lane tags, Barlow for
+  body/ribbon. Registers documented in src/theme/arena.ts.
+*/
+
+@theme {
+  /* The arena ground — one cool near-black ramp; every surface is a step of it. */
+  --color-ground-950: #06080c; /* page backdrop — the dark under the stands */
+  --color-ground-900: #0b0e14; /* the arena floor — board surface */
+  --color-ground-800: #12161f; /* lane bed */
+  --color-ground-700: #1a1f2b; /* raised strip — ribbon, chip beds */
+  --color-ground-600: #232a39; /* press / hover — large marks and text inks only */
+  --color-ground-500: #303a4f; /* rule */
+  --color-ground-400: #47536d; /* brightest line */
+
+  /*
+    Cast inks — Okabe-Ito-derived, one per candidate id, used consistently
+    everywhere a candidate appears (lane, tally, chips, streams, verdict).
+    Validated: WCAG AA on every board surface + pairwise distinct under
+    deuteranopia/protanopia simulation (arena.test.ts).
+  */
+  --color-ada: #8ad4f7; /* sky — O-I sky blue, lightened for the dark ground */
+  --color-eli: #009e73; /* pitch — O-I bluish green, as published */
+  --color-nia: #e8ec33; /* marquee — O-I yellow, nudged greener to clear the amber */
+  --color-theo: #c467ae; /* violet — O-I reddish purple, deepened */
+
+  /* Text inks — tinted from the ground hue, never gray. */
+  --color-ink-bright: #eef2f8; /* headings, focus ring */
+  --color-ink-body: #c7cedc; /* ribbon narration, body copy */
+  --color-ink-mute: #96a0b4; /* secondary, still AA at body size */
+
+  /* Reserved channels — do not spend on decoration. */
+  --color-buzzer: #ff6a00; /* threshold/majority moments ONLY (the 51 line, the buzzer mark) */
+  --color-strike: #e9edf5; /* the lights-out slash on an eliminated lane */
+
+  /* Type — the scoreboard register. Faces are self-hosted (see main.tsx). */
+  --font-led: "Doto Variable", "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Barlow", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: var(--color-ground-950);
+  }
+
+  body {
+    background-color: var(--color-ground-950);
+    color: var(--color-ink-body);
+    font-family: var(--font-body);
+    font-variant-numeric: tabular-nums; /* counts, sums, steppers stay aligned */
+    caret-color: var(--color-ink-bright);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-ink-bright);
+    color: var(--color-ground-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink-bright);
+    outline-offset: 2px;
+  }
+}
+
+/* ————— treatment utilities (the world's materials, utility-ready for T5+) ————— */
+
+/* Tally numerals: LED dot-matrix digits, tabular. Set size/weight per use. */
+@utility tally {
+  font-family: var(--font-led);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/*
+  LED bloom — the numerals' own material (emitted light), not decoration.
+  One authored glow on tally digits only; inherits the digit's color.
+*/
+@utility led-lit {
+  text-shadow: 0 0 0.55em color-mix(in oklab, currentColor 42%, transparent);
+}
+
+/* Lane rail: a team-ink rule at the lane's top edge (ink via currentColor). */
+@utility lane-rule {
+  border-top: 1px solid color-mix(in oklab, currentColor 62%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, currentColor 14%, transparent);
+}
+
+/* Ribbon strip: the raised caption surface with hairline edges. */
+@utility strip-surface {
+  background-color: var(--color-ground-700);
+  border-block: 1px solid var(--color-ground-500);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--color-ink-bright) 6%, transparent);
+}
+
+/* Vote token chip: team-tinted piece (ink via currentColor). */
+@utility token-chip {
+  border: 1px solid color-mix(in oklab, currentColor 55%, transparent);
+  background-color: color-mix(in oklab, currentColor 18%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, currentColor 32%, transparent);
+  border-radius: 3px;
+}
+
+/* Eliminated lane: lights out — the strike's accompaniment, not its color. */
+@utility lane-out {
+  filter: saturate(0.2) brightness(0.55);
+}
+
+/* ————— playback motion devices (T6) —————
+   The world's three authored moments: the strike cuts once, the winning
+   tally beats the buzzer once (amber — the reserved threshold channel), the
+   transfer streams fade in. None of these classes is ever applied in
+   reduced-motion mode: playback swaps states instantly there, and the
+   ribbon carries the identical story. */
+
+/* The strike: one wipe as the slash cuts. */
+@utility strike-flash {
+  animation: strike-in 420ms cubic-bezier(0.22, 0.9, 0.32, 1) 1 both;
+}
+
+@keyframes strike-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* The lights-out dimming rides with the strike. */
+@utility lane-dim {
+  transition: filter 360ms ease-out;
+}
+
+/* The buzzer: one amber pulse on the winning tally — a threshold moment. */
+@utility buzzer-pulse {
+  animation: buzzer 950ms ease-out 1 both;
+}
+
+@keyframes buzzer {
+  0% {
+    text-shadow: 0 0 0.55em color-mix(in oklab, currentColor 42%, transparent);
+    transform: scale(1);
+  }
+  30% {
+    text-shadow:
+      0 0 0.75em var(--color-buzzer),
+      0 0 1.7em color-mix(in oklab, var(--color-buzzer) 55%, transparent);
+    transform: scale(1.045);
+  }
+  100% {
+    text-shadow: 0 0 0.55em color-mix(in oklab, currentColor 42%, transparent);
+    transform: scale(1);
+  }
+}
+
+/* The transfer streams arriving over the floor. */
+@utility stream-in {
+  animation: stream-in 240ms ease-out 1 both;
+}
+
+@keyframes stream-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ————— reduced motion, the app-wide backstop (T9) —————
+   The authored devices above are already gated in JS: playback never applies
+   flash/pulse/stream classes when reduced motion resolves on, and the manual
+   toggle covers those same props. What remained were the residual
+   micro-transitions (chip/select/stepper hover colors, the tip-off lift) —
+   Tailwind `transition-*` utilities the machine never sees. Two nets close
+   them: the OS media query, and `[data-motion='reduced']`, which App.tsx sets
+   on the tree whenever the RESOLVED preference is reduced (system OR manual
+   toggle) so the in-app switch kills them exactly like the OS does. Every
+   animation and transition in the app is accounted for by one of these two
+   rules; asserted by src/a11y.test.ts. */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+[data-motion='reduced'] *,
+[data-motion='reduced'] ::before,
+[data-motion='reduced'] ::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  transition-delay: 0ms !important;
+}

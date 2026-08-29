@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Watch ranked-choice voting happen: pick a scenario, tip off the count, and see losing candidates' votes flow to second choices until someone passes 51."
+    />
+    <meta name="theme-color" content="#06080C" />
+    <meta property="og:title" content="How Votes Flow" />
+    <meta
+      property="og:description"
+      content="Watch ranked-choice voting happen: pick a scenario, tip off the count, and see losing candidates' votes flow to second choices until someone passes 51."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>How Votes Flow — a ranked-choice voting simulator</title>
+  </head>
+  <body>
+    <!--
+      DIRECTION CONTRACT — How Votes Flow (locked 2026-08-28, seed key 71356508)
+
+      THESIS: The election as a live game — four lanes, first to 51 — refusing
+      the explainer-with-sankey default.
+
+      OWN-WORLD: near-black arena ground, four colorblind-safe team inks, buzzer
+      amber, LED tally numerals, ribbon caption strip, court-lane geometry, the
+      strike.
+
+      STORY: visitor picks a scenario, watches winner-take-all round 1 get
+      overturned (or confirmed) by animated elimination rounds with counted
+      transfers, reads the plurality-vs-RCV verdict, tweaks and reruns.
+
+      FIRST VIEWPORT: four huge score lanes with LED tallies over a threshold
+      line at 51, 100 tokens massed courtside, one primary action.
+
+      FORM: seven-candidate grounded list, position 7 (sports scoreboard/arena
+      board world), seed key 71356508.
+
+      FINISH: unreviewed and undocumented is unfinished; this build ends with
+      the finish review, the verdict, DESIGN.md, and every shipping raster
+      carrying its provenance.
+    -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

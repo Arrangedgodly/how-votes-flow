@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+dist
+*.local
+
+# build-evidence captures (kept locally under .impeccable/)
+.impeccable/review/
+.impeccable/critique/**/*.png

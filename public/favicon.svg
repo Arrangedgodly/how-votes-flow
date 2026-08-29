@@ -1,0 +1,14 @@
+<!--
+  How Votes Flow — favicon (refinement #2).
+  The board as its smallest poster: the four cast inks in lane order
+  (ada, eli, nia, theo) as a 2x2 quad on the arena ground (ground-950).
+  Square corners per the Square Court Rule; no buzzer amber — the
+  reservation holds for threshold moments only.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <rect width="16" height="16" fill="#06080C" />
+  <rect x="1" y="1" width="6" height="6" fill="#8AD4F7" />
+  <rect x="9" y="1" width="6" height="6" fill="#009E73" />
+  <rect x="1" y="9" width="6" height="6" fill="#E8EC33" />
+  <rect x="9" y="9" width="6" height="6" fill="#C467AE" />
+</svg>
